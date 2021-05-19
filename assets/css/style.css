@@ -1,0 +1,374 @@
+/* Reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#app {
+    position: relative;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 46px;
+    background-color: #000;
+    color: #fff;
+    z-index: 1;
+}
+
+#header-nav {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#header-nav li {
+    display: block;
+    float: left;
+    position: relative;
+}
+
+#header-nav > li > a {
+    color: #fff;
+}
+
+#header-nav > li > a {
+    display: block;
+    text-decoration: none;
+    padding: 0 24px;
+    line-height: 46px;
+}
+
+#header-nav > li:hover > a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#header-nav .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    list-style: none;
+    color: #000;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); 
+    background-color: #fff;
+}
+
+#header-nav li:last-child:hover .subnav {
+    display: block;
+}
+
+#header-nav .subnav li {
+    float: none;
+    padding: 8px 12px;
+}
+
+#header-nav .subnav li:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#header-nav .subnav a {
+    color: #000;
+    line-height: 22px;
+    text-decoration: none;
+    text-transform: capitalize;
+    border: none;
+}
+
+#header-nav .nav-down {
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#header #header-search {
+    padding: 14px 24px;
+}
+
+#header #header-search:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(/assets/img/slider/slider1.jpg) top center / cover no-repeat;
+}
+
+#slider #text-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+#slider #text-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#slider #text-description {
+    margin-top: 24px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+#content {
+}
+
+#content .content-section {
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 64px 16px; 
+}
+
+#content .section-heading {
+    text-align: center;
+    font-weight: 500;
+    font-size: 26px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+#content .section-sub-heading {
+    text-align: center;
+    margin: 25px 0;
+    font-weight: 500;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.content-section #about-text {
+    text-align: justify;
+    line-height: 20px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+#content #band-members {
+    display: flex;
+    padding: 48px 0;
+}   
+
+#content .band-member__item {
+    width: 33.33333%;
+    text-align: center;
+}
+
+#content .member-name {
+    margin: 15px 0;
+    font-size: 15px;
+    text-transform: capitalize;
+}   
+
+#content .member-avar {
+    width: 60%;
+    border-radius: 4px;
+}
+
+.background-black {
+    background-color: #000;
+    color: #fff;
+}
+
+#tour-schedule {
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.tour-schedule__item {
+    display:flex;
+    color: #000;
+    padding: 8px 16px;
+    border-top: 1px solid #ddd;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.tour-schedule__item:last-child {
+    justify-content: space-between;
+}
+
+.tour-schedule__item > p {
+    opacity: 0.6;
+}
+
+.tour-schedule__item .status {
+    margin-left: 16px;
+    background-color: #f44336;
+    color: #fff;
+    padding: 0 8px; 
+}
+
+.tour-schedule__item #quantity {
+    float: right;
+    background-color: #000;
+    color: #fff;
+    padding: 0 8px;
+    margin-right: 16px;
+    border-radius: 50%;
+}
+
+#tour-ticket {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 32px -8px;
+    justify-content: center;
+}
+
+.newyork-ticket {
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    margin: 0 8px;
+    font-size: 15px;
+    padding-bottom: 16px;
+}
+
+.newyork-ticket .container {
+    padding: 0 16px;
+}
+
+.newyork-ticket__img {
+    width: 100%;
+}
+
+.newyork-ticket__title {
+    margin: 15px 0;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.newyork-ticket__time {
+    margin-bottom: 15px;
+    opacity: 0.6;
+}
+
+.newyork-ticket__description {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.newyork-ticket__btn {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    width: 106px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.newyork-ticket__btn:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
+}
+
+.padding-32 {
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info {
+
+}
+
+.contact-info__location,
+.contact-info__phone,
+.contact-info__email {
+    padding-bottom: 8px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.contact-info__location > i,
+.contact-info__phone > i,
+.contact-info__email > i {
+    padding-right: 8px;
+}
+
+.contact-form input {
+    border-radius: 2px;
+    border: 1px solid #ccc;
+}
+
+
+.contact-form__infor {
+    display:flex;
+    margin-bottom: 8px;
+}
+
+.contact-form__infor > div {
+    padding: 0 8px;
+}
+
+.contact-form__name {
+
+}
+
+.contact-form__message,
+.contact-form__name,
+.contact-form__email {
+    padding: 8px;
+    height: 40px;
+    width: 184px;
+    font-size: 15px;
+}
+
+.contact-form__message {
+    width: 100%;
+}
+
+.btn-send {
+    display: block;
+    float: right;
+    height: 40px;
+    width: 72px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    margin-right: 8px;
+    margin-top: 16px;
+}
+
+
+#footer {
+    text-align: center;
+    padding: 64px 0;
+    opacity: 0.6;
+}
+
+#footer > div {
+    font-size: 24px;
+}
+
+#footer > p {
+    margin: 15px 0;
+}
+
+#footer p > span {
+    text-decoration: underline;
+}

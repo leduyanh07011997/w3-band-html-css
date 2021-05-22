@@ -1,0 +1,40 @@
+
+
+
+
+
+
+/* PC */
+@media (min-width: 1024px) {
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    #header-nav li {
+        float: none;
+    }
+
+    #header #header-search {
+        display: none;
+    }
+    
+    #header #header__menu-btn {
+        display: block;
+    }
+
+    #text-title,
+    #text-description {
+        display: none;
+    }
+
+    #header-nav > li:hover > a {
+        color: #fff;
+        background-color: #000;
+    }
+}

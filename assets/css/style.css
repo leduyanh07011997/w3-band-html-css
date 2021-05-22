@@ -71,6 +71,7 @@ html {
     background-color: #000;
     color: #fff;
     z-index: 1;
+    overflow: hidden;
 }
 
 #header-nav {
@@ -85,10 +86,10 @@ html {
 }
 
 #header-nav > li > a {
-    color: #fff;
 }
 
 #header-nav > li > a {
+    color: #fff;
     display: block;
     text-decoration: none;
     padding: 0 24px;
@@ -141,9 +142,18 @@ html {
     right: 10px;
 }
 
-#header #header-search {
+#header #header-search,
+#header #header__menu-btn {
+    font-size: 16px; 
+    color: #fff;
     padding: 14px 24px;
 }
+
+#header #header__menu-btn {
+    height: 46px;
+}
+
+
 
 #header #header-search:hover {
     background-color: #f44336;
@@ -184,6 +194,7 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding: 64px 16px 112px; 
@@ -403,3 +414,4 @@ html {
     cursor: pointer;
     text-decoration: underline;
 }
+

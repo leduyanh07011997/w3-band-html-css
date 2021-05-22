@@ -7,6 +7,53 @@
 
 html {
     font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.padding-32 {
+    padding: 32px 0;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+
+.l-4 {
+    width: 33.333333%;
+}
+
+.l-6 {
+    width: 50%;
+}
+
+.l-12 {
+    width: 100%;
 }
 
 #app {
@@ -139,7 +186,7 @@ html {
     width: 800px;
     margin-right: auto;
     margin-left: auto;
-    padding: 64px 16px; 
+    padding: 64px 16px 112px; 
 }
 
 #content .section-heading {
@@ -167,14 +214,9 @@ html {
 }
 
 #content #band-members {
-    display: flex;
     padding: 48px 0;
 }   
 
-#content .band-member__item {
-    width: 33.33333%;
-    text-align: center;
-}
 
 #content .member-name {
     margin: 15px 0;
@@ -218,40 +260,42 @@ html {
     margin-left: 16px;
     background-color: #f44336;
     color: #fff;
-    padding: 0 8px; 
+    padding: 3px 4px; 
 }
 
 .tour-schedule__item #quantity {
     float: right;
     background-color: #000;
     color: #fff;
-    padding: 0 8px;
-    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
     border-radius: 50%;
 }
 
 #tour-ticket {
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 32px -8px;
-    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 .newyork-ticket {
-    background-color: #fff;
     color: #000;
-    width: 100%;
-    margin: 0 8px;
     font-size: 15px;
-    padding-bottom: 16px;
 }
 
 .newyork-ticket .container {
-    padding: 0 16px;
+    background-color: #fff;
+    padding: 16px;
 }
 
 .newyork-ticket__img {
+    display: block;
     width: 100%;
+}
+
+.newyork-ticket__img:hover {
+    opacity: 0.6;
 }
 
 .newyork-ticket__title {
@@ -285,29 +329,16 @@ html {
     background-color: #ccc;
 }
 
-.padding-32 {
-    padding: 32px 0;
-    display: flex;
-    justify-content: space-between;
-}
 
 .contact-info {
-
+    font-size: 18px;
+    line-height: 1.5;
 }
 
-.contact-info__location,
-.contact-info__phone,
-.contact-info__email {
-    padding-bottom: 8px;
-    font-size: 15px;
-    font-weight: 500;
+.contact-info i[class*="fa-"] {
+    width: 30px;
 }
 
-.contact-info__location > i,
-.contact-info__phone > i,
-.contact-info__email > i {
-    padding-right: 8px;
-}
 
 .contact-form input {
     border-radius: 2px;
@@ -316,12 +347,7 @@ html {
 
 
 .contact-form__infor {
-    display:flex;
     margin-bottom: 8px;
-}
-
-.contact-form__infor > div {
-    padding: 0 8px;
 }
 
 .contact-form__name {
@@ -331,15 +357,12 @@ html {
 .contact-form__message,
 .contact-form__name,
 .contact-form__email {
-    padding: 8px;
+    padding: 10px;
     height: 40px;
-    width: 184px;
+    width: 100%;
     font-size: 15px;
 }
 
-.contact-form__message {
-    width: 100%;
-}
 
 .btn-send {
     display: block;
@@ -348,10 +371,12 @@ html {
     width: 72px;
     background-color: #000;
     color: #fff;
-    text-align: center;
-    padding-top: 10px;
-    margin-right: 8px;
-    margin-top: 16px;
+    margin: 16px 0;
+}
+
+.btn-send:hover {
+    cursor: pointer;
+    background-color: #ccc;
 }
 
 
@@ -365,10 +390,16 @@ html {
     font-size: 24px;
 }
 
+#footer > div > a:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
 #footer > p {
     margin: 15px 0;
 }
 
-#footer p > span {
+#footer > p > a {
+    cursor: pointer;
     text-decoration: underline;
 }

@@ -8,6 +8,7 @@ menuBtn.onclick = () => {
     if(isClosed) {
         menuBtn.style.backgroundColor = '#ccc'
         headerElement.style.height = 'auto'
+        headerElement.style.overflow = 'none'
     } else {
         menuBtn.style.backgroundColor = '#000'
         headerElement.style.height = null
@@ -16,11 +17,21 @@ menuBtn.onclick = () => {
 
 // đóng khi scroll-behavior
 var menuItems = document.querySelectorAll('#header-nav li a[href*="#"]')
-console.log(menuItems)
 
 Array.from(menuItems).forEach(item => {
-    item.onclick = () => {
-        menuBtn.style.backgroundColor = '#000'
-        headerElement.style.height = null
+    item.onclick = (e) => {
+        const isMatch = item.nextElementSibling && item.nextElementSibling.classList.contains('subnav')
+        if(isMatch) {
+            if(item.nextElementSibling.style.display === 'none') {
+                item.nextElementSibling.style.display = 'block'
+                e.preventDefault()
+            } else {
+                item.nextElementSibling.style.display = 'none'
+                e.preventDefault()
+            }
+        } else {
+            menuBtn.style.backgroundColor = '#000'
+            headerElement.style.height = null
+        }
     }
 })

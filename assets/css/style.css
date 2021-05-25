@@ -18,50 +18,25 @@ html {
     color: #fff !important;
 }
 
+.mt-16 {
+    margin-top: 16px !important;
+}
+
 .padding-32 {
-    padding: 32px 0;
+    padding: 32px 0 !important;
 }
 
 .text-center {
     text-align: center !important;
 }
 
-.row {
-    margin-left: -8px;
-    margin-right: -8px
-}
 
-.row::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.col {
-    float: left;
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
-
-.l-4 {
-    width: 33.333333%;
-}
-
-.l-6 {
-    width: 50%;
-}
-
-.l-12 {
-    width: 100%;
-}
 
 #app {
     position: relative;
 }
 
 #header {
-    display: flex;
     justify-content: space-between;
     position: fixed;
     top: 0;
@@ -71,7 +46,6 @@ html {
     background-color: #000;
     color: #fff;
     z-index: 1;
-    overflow: hidden;
 }
 
 #header-nav {
@@ -108,7 +82,6 @@ html {
     left: 0;
     min-width: 160px;
     list-style: none;
-    color: #000;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); 
     background-color: #fff;
 }
@@ -149,8 +122,13 @@ html {
     padding: 14px 24px;
 }
 
+#header #header-search {
+    float: right;
+}
+
 #header #header__menu-btn {
     height: 46px;
+    display: none;
 }
 
 
@@ -225,7 +203,7 @@ html {
 }
 
 #content #band-members {
-    padding: 48px 0;
+    padding: 32px 0;
 }   
 
 
@@ -286,7 +264,7 @@ html {
 }
 
 #tour-ticket {
-    margin-top: 32px;
+    margin-top: 16px;
     margin-bottom: 32px;
 }
 
@@ -344,6 +322,15 @@ html {
 .contact-info {
     font-size: 18px;
     line-height: 1.5;
+}
+
+.contact-info a {
+    color: #2918ee;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
 }
 
 .contact-info i[class*="fa-"] {
